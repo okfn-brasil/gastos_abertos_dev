@@ -12,12 +12,21 @@ git config --global core.editor vim
 echo -e '\n'
 echo 'Generating ssh keys...'
 mkdir ~/.ssh
-ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
+ssh-keygen -t rsa -N "" -f ~/.ssh/github_rsa
+ssh-add github_rsa
+
+cat <<EOF >> ~/.ssh/config
+
+Host github.com
+  Hostname github.com
+  IdentityFile ~/.ssh/github_rsa
+
+EOF
 
 echo -e '\n'
 echo 'Add the following public key to your Github account (https://github.com/settings/ssh)'
 echo -e '\n'
-cat /home/vagrant/.ssh/id_rsa.pub
+cat /home/vagrant/.ssh/github_rsa.pub
 echo -e '\n'
 read -p "Press Enter to continue."
 
