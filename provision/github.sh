@@ -6,6 +6,9 @@ read -p "Enter your git user email: " git_email
 git config --global user.name "$git_name"
 git config --global user.email "$git_email"
 
+git config --global color.ui true
+git config --global core.editor vim
+
 echo -e '\n'
 echo 'Generating ssh keys...'
 mkdir ~/.ssh

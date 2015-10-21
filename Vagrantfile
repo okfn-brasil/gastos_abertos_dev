@@ -25,6 +25,9 @@ Vagrant.configure("2") do |config|
   # Java
   config.vm.provision :shell, :path => "provision/java.sh"
 
+  # Node.js
+  config.vm.provision :shell, :path => "provision/nodejs.sh"
+
   # ElasticSearch
   config.vm.provision :shell, :path => "provision/elasticsearch.sh"
 
