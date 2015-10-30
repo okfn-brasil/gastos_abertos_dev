@@ -28,6 +28,9 @@ Vagrant.configure("2") do |config|
   # Node.js
   config.vm.provision :shell, :path => "provision/nodejs.sh"
 
+  # Ruby
+  config.vm.provision :shell, :path => "provision/ruby.sh"
+
   # ElasticSearch
   config.vm.provision :shell, :path => "provision/elasticsearch.sh"
 
@@ -37,6 +40,7 @@ Vagrant.configure("2") do |config|
   # Apps
   config.vm.network :forwarded_port, guest: 5000, host: 5000 # API
   config.vm.network :forwarded_port, guest: 8000, host: 8000 # Frontend
+  config.vm.network :forwarded_port, guest: 4000, host: 4000 # Blog
 
   # ElasticSearch
   config.vm.network :forwarded_port, guest: 9200, host: 9200
