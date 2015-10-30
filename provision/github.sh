@@ -35,7 +35,9 @@ mkdir /vagrant/repos
 git clone git@github.com:okfn-brasil/gastos_abertos.git /vagrant/repos/gastos_abertos
 git clone git@github.com:okfn-brasil/gastos_abertos_website.git /vagrant/repos/gastos_abertos_website
 git clone git@github.com:okfn-brasil/gastos_abertos_dados.git /vagrant/repos/gastos_abertos_dados
+git clone git@github.com:okfn-brasil/gastos_abertos_blog.git /vagrant/repos/gastos_abertos_blog
 
 ln -s /vagrant/repos/gastos_abertos ~/gastos_abertos
 ln -s /vagrant/repos/gastos_abertos_website ~/gastos_abertos_website
 ln -s /vagrant/repos/gastos_abertos_dados ~/gastos_abertos_dados
+ln -s /vagrant/repos/gastos_abertos_blog ~/gastos_abertos_blog
